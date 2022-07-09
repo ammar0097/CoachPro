@@ -11,8 +11,10 @@ import {
 } from "@chakra-ui/react";
 import "./Hero.css";
 import plLogo from "./premier-league-logo.png";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  let navigate = useNavigate();
   return (
     <>
       <Container maxW={"3xl"}>
@@ -20,10 +22,10 @@ function Hero() {
           as={Box}
           textAlign={"center"}
           spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}
+          py={{ base: 20, md: 20 }}
         >
           <Center>
-            <Image src={plLogo} alt="premier league logo" boxSize="150px" />
+            <Image src={plLogo} alt="premier league logo" boxSize="120px" />
           </Center>
 
           <Heading
@@ -36,7 +38,7 @@ function Hero() {
               CoachPro
             </Text>
           </Heading>
-          <Text color={"white"}>
+          <Text color={"gray.600"}>
             Monetize your content by charging your most loyal readers and reward
             them loyalty points. Give back to your loyal readers by granting
             them access to your pre-releases and sneak-peaks.
@@ -49,6 +51,7 @@ function Hero() {
             position={"relative"}
           >
             <Button
+            onClick={() => navigate("/signup")}
               colorScheme={"green"}
               bg={"#37003c"}
               rounded={"full"}
