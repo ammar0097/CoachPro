@@ -13,10 +13,12 @@ import "./Hero.css";
 import plLogo from "./premier-league-logo.png";
 import { useNavigate } from "react-router-dom";
 
+
 function Hero() {
   let navigate = useNavigate();
   return (
     <>
+
       <Container maxW={"3xl"}>
         <Stack
           as={Box}
